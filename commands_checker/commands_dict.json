@@ -1,0 +1,110 @@
+{
+  "action_patterns": {
+    "включи": {
+      "свет": "light_on",
+      "подсветку": "light_on", 
+      "музыку": "play",
+      "светомузыку": "music_mode",
+      "волну": "wave_effect",
+      "дыхание": "breathing_effect",
+      "умную подсветку": "monitor_mode",
+      "синхронизацию с экраном": "monitor_mode",
+      "статичный свет": "static_mode",
+      "обычный свет": "static_mode",
+      "браузер": "browser",
+      "плейлист": "switch_playlist"
+    },
+    "выключи": {
+      "свет": "light_off",
+      "подсветку": "light_off",
+      "эффекты": "static_mode",
+      "будильник": "stop_alarm",
+      "компьютер": "shutdown"
+    },
+    "сделай": {
+      "ярче": "brightness_up",
+      "тусклее": "brightness_down", 
+      "громче": "volume_up",
+      "тише": "volume_down",
+      "поиск": "search",
+      "плейлист": "create_playlist"
+    },
+    "поставь": {
+      "яркость": "set_brightness",
+      "громкость": "set_volume",
+      "паузу": "pause",
+      "на паузу": "pause",
+      "будильник": "set_alarm",
+      "таймер": "set_timer"
+    },
+    "установи": {
+      "яркость": "set_brightness",
+      "громкость": "set_volume"
+    },
+    "открой": {
+      "браузер": "browser"
+    },
+    "создай": {
+      "плейлист": "create_playlist"
+    }
+  },
+
+  "parameter_commands": {
+    "яркость": "set_brightness",
+    "громкость": "set_volume", 
+    "громко": "set_volume",
+    "ярко": "set_brightness",
+    "будильник": "set_alarm",
+    "таймер": "set_timer",
+    "поиск": "search",
+    "найди": "search"
+  },
+
+  "direct_commands": {
+    "ярче": "brightness_up",
+    "тусклее": "brightness_down",
+    "громче": "volume_up", 
+    "тише": "volume_down",
+    "пауза": "pause",
+    "стоп": "pause",
+    "останови": "pause",
+    "продолжи": "resume",
+    "возобнови": "resume",
+    "следующий": "next",
+    "следующая": "next",
+    "предыдущий": "previous",
+    "назад": "previous",
+    "светомузыка": "music_mode",
+    "волна": "wave_effect",
+    "дыхание": "breathing_effect",
+    "умная подсветка": "monitor_mode",
+    "статичный свет": "static_mode",
+    "браузер": "browser",
+    "поиск": "search",
+    "зацикли": "repeat",
+    "повтор": "repeat"
+  },
+
+  "colors": {
+    "белый": "set_color_white",
+    "красный": "set_color_red",
+    "зеленый": "set_color_green", 
+    "синий": "set_color_blue",
+    "желтый": "set_color_yellow",
+    "фиолетовый": "set_color_purple",
+    "голубой": "set_color_cyan",
+    "оранжевый": "set_color_orange",
+    "бирюзовый": "set_color_turquoise",
+    "розовый": "set_color_pink",
+    "мятный": "set_color_mint",
+    "лавандовый": "set_color_lavender"
+  },
+
+  "palettes": {
+    "холодная": "set_palette_cold",
+    "ламповая": "set_palette_lamp",
+    "теплые": "set_palette_warm", 
+    "мятная": "set_palette_minty",
+    "бархатная": "set_palette_velvet"
+  }
+}
