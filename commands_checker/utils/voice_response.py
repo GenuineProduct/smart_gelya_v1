@@ -1,12 +1,18 @@
-# voice_response.py
-from . import player  # Импортируем общего player
+# commands_checker/utils/voice_response.py (исправленный)
+from player import get_player_instance
 
 def with_gelya_response(gelya_func, allow_volume_change=False):
     def wrapper(*args, **kwargs):
+        player = get_player_instance()
+        if player is None:
+            print("[WARNING] Плеер не инициализирован, пропускаю управление громкостью")
+            gelya_func(*args, **kwargs)
+            return
+            
         was_playing = player.is_playing()
         original_volume = player.get_volume() * 100  # в процентах
 
-        # print(f"[DEBUG] Было: playing={was_playing}, volume={original_volume}%")
+        print(f"[DEBUG] Было: playing={was_playing}, volume={original_volume}%")
 
         if was_playing:
             if original_volume <= 10:

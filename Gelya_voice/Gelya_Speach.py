@@ -2,23 +2,13 @@ from tts_with_rvc import TTS_RVC
 import sounddevice as sd
 import soundfile as sf
 import time
-
-
-import os
-import subprocess
-
 class GelyaSpeach():
     def __init__(self):
-        # Проверяем есть ли модель локально
-        if not os.path.exists("models\\angelina_voice_2.pth"):
-            print("❌ Модель не найдена локально")
-            # Тут можно добавить загрузку с альтернативного источника
-        else:
-            self.tts = TTS_RVC(
-                        model_path="models\\gelya_voice_1.pth",
-                        index_path="logs\\added_IVF2611_Flat_nprobe_1_angelina_voice_2_v1.index",
-                        device="cuda:0"
-                    )
+        self.tts = TTS_RVC(
+                    model_path="models/gelya_voice_1.pth",
+                    index_path="logs/added_IVF2611_Flat_nprobe_1_gelya_voice_1_v1.index",
+                    device="cuda:0"
+                )
     def speach(self, message, max_retries=3):
         for attempt in range(max_retries):
             try:
@@ -36,11 +26,11 @@ class GelyaSpeach():
         
 # while True:
     
-#     message = str(input("Ввод:"))
+#      message = str(input("Ввод:"))
           
-#     gelya = GelyaSpeach()
-#     if message == "стоп".lower():
-#         break
+#      gelya = GelyaSpeach()
+#      if message == "стоп".lower():
+#          break
     
-#     else:gelya.speach(message)
+#      else:gelya.speach(message)
 

@@ -1,16 +1,17 @@
 # commands_checker/__init__.py
-from player.player import MusicPlayer
-from config.config import PLAYLISTS_PATH
-# Единый глобальный player для всего пакета
-player = MusicPlayer(f"{PLAYLISTS_PATH}/всякое")
+from .core import SmartCommandHandler, OllamaIntentAnalyzer
+from .domains.music import MusicPlayback, MusicVolume, MusicPlaylists
+from .domains.system import SystemBrowser, SystemSearch, SystemPower
+from .domains.light import LightColorControl, LightBrightnessControl, LightEffectControl, LightPaletteControl
+from .utils import with_gelya_response
 
-from .command_handler import CommandHandler
-from .music_commands import MusicCommands
-from .system_commands import SystemCommands
-from .light_commands import LightCommands
-from .voice_response import with_gelya_response
+# Для обратной совместимости
+CommandHandler = SmartCommandHandler
 
 __all__ = [
-    'CommandHandler', 'MusicCommands', 'SystemCommands', 'LightCommands',
-    'with_gelya_response', 'player'
-           ]
+    'SmartCommandHandler', 'CommandHandler', 'OllamaIntentAnalyzer',
+    'MusicPlayback', 'MusicVolume', 'MusicPlaylists',
+    'SystemBrowser', 'SystemSearch', 'SystemPower', 
+    'LightColorControl', 'LightBrightnessControl', 'LightEffectControl', 'LightPaletteControl',
+    'with_gelya_response'
+]

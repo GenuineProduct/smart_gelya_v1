@@ -176,3 +176,9 @@ class MusicPlayer:
         except Exception as e:
             print(f"[ERROR] Ошибка загрузки плейлиста: {e}")
             return False
+    
+    @classmethod
+    def get_instance(cls):
+        """Получить глобальный экземпляр плеера"""
+        from . import get_player_instance
+        return get_player_instance()
